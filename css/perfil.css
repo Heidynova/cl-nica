@@ -1,0 +1,204 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f6fa;
+  margin: 0;
+  padding: 40px;
+  color: #333;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+.perfil-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* mismo alto */
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* TARJETA IZQUIERDA */
+.perfil-card {
+  position: relative;
+  background: #ffffff;
+  width: 280px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 🔥 importante */
+}
+
+
+.perfil-card,
+.perfil-form-card {
+  align-self: stretch; /* 🔥 se estiran igual */
+}
+
+
+
+
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00afe9;
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+
+.nombre {
+  color: #00afe9;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.correo {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.fecha {
+  font-size: 14px;
+  color: #555;
+}
+
+.fecha span {
+  font-weight: bold;
+  color: #00afe9;
+}
+
+/* TARJETA DERECHA */
+.perfil-form-card {
+  background: #ffffff;
+  flex: 1;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+  display: flex;              /* 🔥 */
+  flex-direction: column;     /* 🔥 */
+}
+
+
+.perfil-form-card h2 {
+  color: #00afe9;
+  margin-bottom: 20px;
+}
+
+.form-perfil {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #00afe9;
+  outline: none;
+}
+
+.btn-actualizar {
+  grid-column: span 2;
+  background-color: #00afe9;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-actualizar:hover {
+  background-color: #00afe9;
+}
+
+/* SECCIÓN CITAS */
+.citas-section {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  margin-top: 25px;
+}
+
+.citas-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00c0ff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* TABLA RECTA */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla thead th {
+  background: #00afe9;
+  color: #fff;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  border: 1px solid #00afe9;
+}
+
+.tabla tbody tr {
+  background: #ffffff;
+}
+
+.tabla tbody tr:hover {
+  background: #f2f5f9;
+}
+
+.tabla td {
+  padding: 14px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+/* BOTÓN CANCELAR */
+.btn-cancelar {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-cancelar:hover {
+  background: #c0392b;
+}

@@ -1,0 +1,798 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("../img/image1.png");
+    background-size: cover;   
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* mueve el contenido hacia la izquierda */
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: rgb(151, 151, 151);
+    padding: 20px 40px; /* espacio interno */
+    margin: 40px auto; /* mantiene el header centrado horizontalmente */
+    border-radius: 12px;
+    position: relative;
+    width: 90%; /* mantiene la forma y evita que se estire demasiado */
+}
+
+/* Logo */
+.logo img {
+  height: 60px; /* tamaño del logo */
+  margin-right: 20px; /* espacio entre logo y menú */
+}
+
+/* Menú */
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-left: 20px; /* espacio entre opciones */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: rgb(129, 129, 129);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #2b0594;
+}
+
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.menu ul li.login {
+  margin-left: 600px;
+}
+
+.menu ul li.login a {
+  background: #2b0594;            /* color liso */
+  color: #ffffff;                 /* texto blanco */
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* sombra */
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+/* cuadro--------------------------------------------------------------------------------------------- */
+
+.cuadro-izquierda {
+    max-width: 490px;
+    padding: 60px 40px;
+    margin: 50px 0 50px 50px; /* Alineado a la izquierda */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco ligeramente transparente */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: left;
+    font-family: 'Nunito', sans-serif; /* Tipografía elegante para aspecto clínico */
+}
+
+.cuadro-izquierda h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555555;
+    margin-bottom: 40px;
+    margin-left: 50px;
+}
+
+.subtitulo {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #444;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+.btn-registrate {
+    background: linear-gradient(135deg, #2b0594, #00c0ff);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-registrate a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-registrate:hover {
+    filter: brightness(85%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+
+/* menu--------------------------------------------------------------------------------------------------- */
+
+/* Contenedor principal alineado a la izquierda */
+.servicios-container {
+    position: relative; 
+    max-width: 600px;
+    margin: 50px 0 50px 60px; /* deja margen a la izquierda */
+    margin-top: 100px; /* espacio superior entre secciones */
+    margin-bottom: 100px; /* espacio inferior */
+    padding: 20px;
+}
+
+.titulo-servicios {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3em;
+  font-weight: normal;
+  font-style: italic;
+  color: #444;
+  margin-top: 100px;
+  margin-bottom: 120px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 250px; /* mueve el título un poco hacia la derecha */
+}
+
+
+/* Contenedor del acordeón */
+.acordeon-container {
+    max-width: 700px;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Acordeón sin bordes visibles */
+.acordeon-item {
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* Encabezado del acordeón */
+.acordeon-item > summary.acordeon-header {
+    list-style: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 1.15em;
+    color: #004d40;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.acordeon-item > summary.acordeon-header:hover {
+    color: #2b0594;
+}
+
+/* Ícono verde a la izquierda */
+.check-icon {
+    font-size: 1.2em;
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+/* Título del acordeón */
+.acordeon-title {
+    flex-grow: 1;
+}
+
+/* Flecha animada */
+.acordeon-header::after {
+    content: '\2303';
+    font-size: 1.5em;
+    color: #004d40;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.acordeon-item[open] > .acordeon-header::after {
+    transform: translateY(-50%) rotate(0deg);
+    color: #2b0594;
+}
+
+/* Contenido del acordeón */
+.acordeon-content {
+    padding: 10px 15px;
+    line-height: 1.6;
+    color: #444;
+    font-size: 1em;
+    background: transparent;
+    border: none;
+}
+
+.acordeon-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.acordeon-content li {
+    list-style-type: "• ";
+    margin-bottom: 5px;
+}
+
+.logo-servicios {
+  position: absolute;
+  top: 68%;
+  right: -450px;
+  transform: translateY(-50%);
+  opacity: 0.75;          /* menos transparente */
+  pointer-events: none;
+}
+
+.logo-servicios img {
+  width: 300px;
+  height: auto;
+}
+
+
+
+
+/* formulario de registro---------------------------------------------------------------------------------------------------------- */
+/* === Sección Registro Estilizada === */
+.registro-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 120px;   /* ← separación con el footer */
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+}
+
+/* Contenedor del formulario */
+.registro-container {
+  position: relative;
+  background-color: #ffffff;
+  padding: 50px 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  max-width: 450px;
+  width: 100%;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.registro-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Título */
+.registro-container h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2em;
+  font-style: italic;
+  color: #1976d2;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #1976d2;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* Formulario */
+.registro-form label {
+  display: block;
+  font-size: 0.95em;
+  margin-bottom: 6px;
+  color: #555;
+  font-weight: 700;
+}
+
+.registro-form input,
+.registro-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registro-form input:focus,
+.registro-form select:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 8px rgba(25,118,210,0.2);
+  outline: none;
+}
+
+/* Botón */
+.registro-form button {
+  width: 100%;
+  padding: 12px 28px;
+  background-color: #1976d2;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.registro-form button:hover {
+  background-color: #115293;
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(25,118,210,0.3);
+}
+
+/* Términos */
+.terminos {
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 10px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .registro-container {
+    padding: 30px 20px;
+  }
+}
+
+
+/* nosotros--------------------------------------------------------------------------------------------------------- */
+
+.nosotros-section {
+  width: 100%;
+  padding: 100px 80px;
+  background: linear-gradient(135deg, #f5f5f5, #ffffff); /* tonos gris claro */
+  font-family: 'Times New Roman', Times, serif;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  transition: all 0.5s ease;
+}
+
+.nosotros-section::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  width: 150%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.03), transparent 70%);
+  transform: rotate(25deg);
+}
+
+/* ===================== Hover elegante en todo el cuadro ===================== */
+.nosotros-section:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.18);
+}
+
+/* ===================== Texto a la izquierda ===================== */
+.nosotros-texto {
+  flex: 1;
+  max-width: 55%;
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #444444;
+  text-align: justify;
+  padding-left: 60px; /* separación de la izquierda */
+  padding-right: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-texto h2 {
+  font-size: 3.2em;
+  font-weight: 400;
+  font-style: italic;
+  color: #222222;
+  margin-bottom: 30px;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ===================== Imágenes a la derecha ===================== */
+.nosotros-imagenes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-imagenes img {
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  filter: grayscale(10%); /* ligero efecto gris */
+}
+
+.nosotros-imagenes img:hover {
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  filter: grayscale(0%); /* color completo al pasar el cursor */
+}
+
+/* ===================== Animación de entrada ===================== */
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.nosotros-section {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 900px) {
+  .nosotros-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 30px;
+    text-align: center;
+    border-radius: 30px;
+  }
+
+  .nosotros-texto {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .nosotros-imagenes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nosotros-imagenes img {
+    width: 45%;
+    height: auto;
+  }
+}
+
+/* especialistas---------------------------------------------------------------------------------------------------- */
+
+.specialists-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f7faff;
+  font-family: Arial, sans-serif;
+}
+
+.specialists-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1a1a1a;
+}
+
+.specialists-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.specialist-card {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.specialist-card:hover {
+  transform: translateY(-10px);
+}
+
+.photo-circle {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #1a73e8;
+}
+
+.photo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.specialist-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.specialist-card p {
+  font-size: 1rem;
+  color: #555555;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #1a73e8; /* color azul elegante */
+  width: 900px; /* longitud de la línea */
+  margin: 20px auto; /* centrada */
+  border-radius: 1px; /* bordes redondeados */
+}
+
+
+
+
+/* contacto--------------------------------------------------------------------------------------------------------------- */
+/* ===================== Contenedor Principal ===================== */
+.contacto-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 80px 60px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f7f9fb;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* ===================== Formulario ===================== */
+.contacto-form {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 40px; /* 🔹 Separa más el contenido de la izquierda */
+}
+
+.contacto-form h2 {
+  font-size: 2.8em;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.contacto-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1em;
+  resize: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: #007acc;
+  box-shadow: 0 0 8px rgba(0,162,255,0.2);
+  outline: none;
+}
+
+.contacto-form button {
+  background-color: #007acc;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contacto-form button:hover {
+  background-color: #008ed1;
+  transform: translateY(-2px);
+}
+
+/* ===================== Información a la derecha ===================== */
+.contacto-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 150px; /* 🔹 Baja el contenido de la derecha */
+  margin-left: 90px;  /* mueve más hacia la derecha */
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.info-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.info-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #007acc;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  margin: 2px 0;
+  color: #555;
+  font-size: 1em;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 900px) {
+  .contacto-section {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+
+  .contacto-info {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px; /* 🔹 Ajuste responsive para bajar contenido */
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-item img {
+    margin-bottom: 10px;
+  }
+
+  .contacto-form {
+    margin-left: 0; /* 🔹 Quitar separación extra en móvil */
+  }
+}
+
+
+
+/* footer----------------------------------------------------------------------------------------------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007acc; /* azul elegante */
+  color: #fff;
+  padding: 20px 80px;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Izquierda: logo y nombre */
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain; /* 🔹 muestra el logo completo sin recorte */
+  border: none;        /* 🔹 elimina el borde */
+  border-radius: 0;    /* 🔹 elimina el círculo */
+}
+
+.footer-nombre {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Derecha: íconos de redes sociales */
+.footer-right {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+
+  /* 🔹 Quita el filtro blanco que hacía que no se vean los íconos */
+  filter: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2); /* brillo suave al pasar el mouse */
+}
+
+/* Adaptable en móviles */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-nombre {
+    font-size: 1.5rem;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
