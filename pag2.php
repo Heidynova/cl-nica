@@ -83,6 +83,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
    <!-- manu -->
 
    <section id="servicio"  class="servicios-container">
+
+      
     <h2  class="titulo-servicios">Servicios que Ofrecemos</h2>
     
     <div class="acordeon-container">
@@ -228,18 +230,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 <section id="contacto" class="contacto-section">
   <div class="contacto-form">
     <h2>Contactanos</h2>
-    <form>
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+<form 
+  id="miFormulario"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSfl4oBVDfsb-W16vEHXrDTIPOVVOf387Fq9AbS0tlPP5X6uyA/formResponse"
+  method="POST"
+  target="hidden_iframe"
+  onsubmit="return enviarFormulario();"
+>
 
-      <label for="correo">Correo Electrónico</label>
-      <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+  <label>Nombre</label>
+  <input type="text" name="entry.1744520096" required>
 
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+  <label>Correo Electrónico</label>
+  <input type="email" name="entry.233162975" required>
 
-      <button type="submit">Enviar</button>
-    </form>
+  <label>Mensaje</label>
+  <textarea name="entry.706416952" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<script>
+function enviarFormulario() {
+  setTimeout(() => {
+    document.getElementById("miFormulario").reset();
+  }, 500); // espera medio segundo para que se envíe
+
+  return true;
+}
+</script>
   </div>
 
   <div class="contacto-info">
